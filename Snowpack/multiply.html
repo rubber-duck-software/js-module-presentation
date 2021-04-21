@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-size: 30pt;
+        margin: 100px;
+      }
+      input {
+        font-size: 30pt;
+        width: 120px;
+      }
+      button {
+        font-size: 30pt;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="number" id="num1" /> <span>x</span
+    ><input type="number" id="num2" /> <span>=</span>
+    <span id="answer"></span>
+    <br />
+    <br />
+    <button id="calculate">Calculate</button>
+    <br />
+    <br />
+    <a href="./add.html">Add</a>
+  </body>
+  <script type="module">
+    import { multiply } from './multiply.js';
+    document.getElementById('calculate').addEventListener('click', () => {
+      const result = multiply(
+        document.getElementById('num1').value,
+        document.getElementById('num2').value
+      );
+      document.getElementById('answer').innerHTML = result;
+    });
+  </script>
+</html>
