@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <style>
@@ -15,7 +16,7 @@
     </style>
   </head>
   <body>
-    <input type="number" id="num1" /> <span>+</span
+    <input type="number" id="num1" /> <span>x</span
     ><input type="number" id="num2" /> <span>=</span>
     <span id="answer"></span>
     <br />
@@ -23,15 +24,12 @@
     <button id="calculate">Calculate</button>
     <br />
     <br />
-    <a href="./multiply.html">Multiply</a>
+    <a href="./add.html">Add</a>
   </body>
+  <script src="./bundle.js"></script>
   <script>
-    function add(num1, num2) {
-      return Number(num1) + Number(num2);
-    }
-
     document.getElementById('calculate').addEventListener('click', () => {
-      const result = add(
+      const result = MyMath.multiply(
         document.getElementById('num1').value,
         document.getElementById('num2').value
       );

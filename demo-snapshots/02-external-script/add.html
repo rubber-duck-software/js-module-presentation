@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <style>
@@ -15,7 +16,7 @@
     </style>
   </head>
   <body>
-    <input type="number" id="num1" /> <span>×</span
+    <input type="number" id="num1" /> <span>+</span
     ><input type="number" id="num2" /> <span>=</span>
     <span id="answer"></span>
     <br />
@@ -23,23 +24,12 @@
     <button id="calculate">Calculate</button>
     <br />
     <br />
-    <a href="./add.html">Add</a>
+    <a href="./multiply.html">Multiply</a>
   </body>
+  <script src="./math.js"></script>
   <script>
-    function add(num1, num2) {
-      return Number(num1) + Number(num2);
-    }
-
-    function multiply(num1, num2) {
-      let res = 0;
-      for (let i = 0; i < Number(num2); i++) {
-        res = add(res, num1);
-      }
-      return res;
-    }
-
     document.getElementById('calculate').addEventListener('click', () => {
-      const result = multiply(
+      const result = add(
         document.getElementById('num1').value,
         document.getElementById('num2').value
       );
