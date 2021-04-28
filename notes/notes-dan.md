@@ -1,4 +1,4 @@
-# Inline Script
+# 1. Inline Script
 
 > See `demo-snapshots/01-inline-script`.
 
@@ -15,7 +15,7 @@
 - - -
 
 
-# External Script (1)
+# 2. External Script (single file)
 
 > See `demo-snapshots/02-external-script`.
 
@@ -42,7 +42,7 @@ Split `add` and `multiply` methods into a `math.js` file.
 
 
 
-# External Script (2)
+# 3. External Script (multiple files)
 
 > See `demo-snapshots/03-external-script`.
 
@@ -67,7 +67,7 @@ Split each function into its own `.js` file.
 
 
 
-# Bundlers
+# 4. Bundlers
 
 > See `demo-snapshots/04-browserify`.
 
@@ -77,6 +77,10 @@ Split each function into its own `.js` file.
 
 - Allows us to keep our functions in separate files.
 - Removes need to manually track dependencies.
+
+```
+browserify my-math.js -s MyMath -o bundle.js
+```
 
 ## ⏱ Changes
 
@@ -93,3 +97,19 @@ Split each function into its own `.js` file.
 
 - Everything is still global.
 - Bundle can be huge.
+
+
+
+# 5. Bundlers (with node modules)
+
+> See `demo-snapshops/05-browserify-modules`
+
+## 💡 Idea
+
+Bundle Node.js modules as well as your own code.
+
+- Allows you to use external libraries.
+
+## ⏱ Changes
+
+- define node package dependencies  in `package.json`
