@@ -26,13 +26,10 @@
     <br />
     <a href="./multiply.html">Multiply</a>
   </body>
+  <script src="./bundle.js"></script>
   <script>
-    function add(num1, num2) {
-      return Number(num1) + Number(num2);
-    }
-
     document.getElementById('calculate').addEventListener('click', () => {
-      const result = add(
+      const result = MyMath.add(
         document.getElementById('num1').value,
         document.getElementById('num2').value
       );
